@@ -13,7 +13,6 @@ export default function page() {
   const cartData = useAppSelector((state) => state.list);
   const [totalAmount, setTotalAmount] = useState(0);
   const [isform, setIsform] = useState(false);
-  const [Cartdishes, setCartDishes] = useState(1);
   const [domLoaded, setDomLoaded] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const dispatch = useAppDispatch();
@@ -48,7 +47,7 @@ export default function page() {
   useEffect(() => {
     setDomLoaded(true);
     calculateTotalAmount();
-  }, []);
+  }, [calculateTotalAmount]);
   return (
     <>
       <div className="p-10">
