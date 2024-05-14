@@ -9,7 +9,7 @@ interface IDishes {
   name: string;
   price: number;
 }
-export default function page() {
+export default function Mycomp() {
   const cartData = useAppSelector((state) => state.list);
   const [totalAmount, setTotalAmount] = useState(0);
   const [isform, setIsform] = useState(false);

@@ -15,6 +15,7 @@ export default function DishList() {
     const dispatch = useDispatch()
     const handleAddToCart = (dish: IDishes) => {
         dispatch(addCart(dish))
+        alert("added to cart")
         console.log("clicked")
     }
     
